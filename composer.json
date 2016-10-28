@@ -1,0 +1,45 @@
+{
+  "name": "jguittard/zend-hydrator-doctrine",
+  "description": "Doctrine hydration support in ZF",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Julien Guittard",
+      "email": "julien.guittard@me.com"
+    }
+  ],
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "doctrine/orm": "^2.5",
+    "doctrine/common": "^2.6",
+    "zendframework/zend-hydrator": "^2.2",
+    "zendframework/zend-filter": "^2.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zend\\Hydrator\\Doctrine\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8",
+    "squizlabs/php_codesniffer": "^2.5",
+    "zendframework/zend-servicemanager": "^2.7.3 || ^3.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ZendTest\\Hydrator\\Doctrine\\": "tests/"
+    }
+  },
+  "scripts": {
+    "check": [
+      "@cs",
+      "@test"
+    ],
+    "coveralls": "coveralls",
+    "cs": "phpcs",
+    "cs-fix": "phpcbf",
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-clover clover.xml"
+  }
+}
